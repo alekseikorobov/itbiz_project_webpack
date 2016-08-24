@@ -1,0 +1,417 @@
+global-reset()
+/*1. определяем обобщенные правила (функции)*/
+/*@import 'nib';*/
+
+/*vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+
+border-radius()
+	vendor('border-radius', arguments)*/
+
+/*box-shadow()
+	vendor('box-shadow', arguments)*/
+
+
+/* end 1. определяем обобщенные правила*/
+
+
+/*2. общие стиль сайта*/
+/*шрифт*/
+
+/*end шрифт*/
+
+
+/*цвета*/
+	/*фон*/
+	/*текст*/
+	/*заголовки*/
+/*end цвета*/
+
+/**/
+
+/*end 2. общий стиль сайта*/
+
+body
+	font-family: "RobotoRegular", sans-serif
+	font-size: 16px
+
+label
+	display: inline-block
+	max-width: 100%
+	margin-bottom: 5px
+	color: white
+	
+
+.menu
+	// width 100px;
+	// height 100px;
+	background url('../image/2fons.ru-28032_m.jpg');
+	background-size 100%
+	padding 10px
+	//box-shadow0px 0px 10px;
+	//top: 0px
+	//z-index: 9999
+	width: 100%
+	//top: 150px 
+	//position: fixed
+	z-index: 200 !important
+.sticky-wrapper
+	z-index 100
+.menu__item
+	display inline-block
+	text-align center
+	padding 27px
+	margin: 0px 3px
+	text-decoration: blink
+	transition:all 700ms, transform 700ms
+	& a
+		te
+	&:hover
+		background-color white
+		text-decoration: blink
+.menu1
+	@extend .menu
+	width 200px
+
+.pre_block
+	background-color black
+.block
+	width 100%
+	height 500px
+	//z-index -1
+	position relative
+	padding 34px
+
+
+.block_setka
+	@extend .block
+	background url('../image/test_1.png')
+	//box-shadow 0px 0px 100px #929292 inset
+
+.block_video
+	@extend .block
+	overflow hidden
+	background url('../image/image1.png') no-repeat
+	background-size: cover
+	padding 0px
+	display: table
+	//height 800px
+	text-align: center
+// .block_video__cover
+// 	width 100%
+// 	height 100%
+// 	position absolute
+// 	top 0px
+// 	left 0px
+// 	//background rgba(18, 26, 29, 0.37)
+// 	text-align center
+
+// @media (max-width:900px){
+// .block_video{
+// 	margin-top: 400px
+// 	}
+// }
+	
+
+//.block_contact,.block_portfolio
+//	background url('../image/416658223.jpg')
+.block_video__info
+	margin-top 10%
+	h1
+		font-size 20px
+		font-weight bold
+		color: white
+		line-height: 2
+		text-transform: uppercase
+		opacity: 0
+		transition:all 1000ms, transform 1700ms
+		transform: translate(0px, 100px)
+	h2
+		font-size 18px
+		font-weight bold
+		color: white
+		line-height: 2
+		text-transform: uppercase
+		opacity: 0
+		transition:all 1000ms, transform 1700ms
+		transform: translate(0px, 100px)
+
+h1
+	font-size 24px
+	font-weight bold
+	text-transform: uppercase
+	margin: 10px 0px 20px 0px
+h2
+	font-size 18px
+	font-weight bold
+	text-transform: uppercase
+	margin: 10px 0px 20px 0px	
+
+.block3
+	@extend .block
+	padding 0px
+	background white
+	
+.block4
+	@extend .block
+	padding 0px
+	text-align center
+	margin-top: 90px
+	height: inherit
+	//width: 1000px
+	//background url('../image/')
+
+.mouse1
+	width 200px
+	height 200px
+	background-color blue
+	border-radius 50%
+	//z-index 1
+	position absolute
+	top -500px
+	box-shadow 0px 0px 100px blue
+
+.blockForm
+	width 300px
+	height 400px
+	background-color #adbbc5
+	margin-left 100px
+	opacity 0.8
+	box-shadow 0px 0px 10px
+	padding 20px
+
+video
+	width 100%
+
+.logo
+	background url('../image/1_Primary_logo2.png')
+	background-size: 100%
+	width: 200px
+	height: 200px
+	display: inline-block
+	opacity: 0
+	transition: all 1000ms, transform 1000ms
+	transform: translate(0px, 100px)
+.logo_min
+	background url('../image/1_Primary_logo2.png')
+	background-size: 100%
+	display: inline-block
+	width: 70px
+	height: 70px
+
+.logo__vis
+	transform: translate(0px, 0px) !important
+	opacity: 1 !important
+
+.arrow_down
+	border: 30px solid transparent
+	border-top-color: white
+	display: inline-block
+	margin-top: 15px
+	opacity: 0
+	transition:all 500ms, transform 3000ms
+	transform: translate(0px, 100px)
+	&:hover
+		border-top-color: grey
+
+
+.bl
+	box-shadow 0px 0px 3px
+	width 100px
+	height 100px
+	display inline-block
+	margin: -1.3px 0px
+
+
+.c
+	perspective: 800px
+
+.position
+	display: inline-block
+	margin: -1.3px 0px
+	padding: 0px
+
+.m
+	transition: 1s
+	transform-style: preserve-3d
+.front
+	width: 100%
+	height: 100px
+	background: #fff
+	position: absolute
+	backface-visibility: hidden
+	//border: 1px solid #ddd
+
+.back
+	width: 100%
+	height: 100px
+	backface-visibility: hidden
+	//background-color: #23527c//#000
+	background-color: #181b1f
+	//border: 1px solid #ddd
+	color: #777
+	//position: absolute
+	transform: rotateY(180deg)
+	backface-visibility: hidden
+	color: white
+	padding: 10px
+	font-size: 91px
+
+.block_inform
+	margin-top: 100px
+	background-color: #111
+	height 200px
+	opacity: 0
+	transition:all 500ms, transform 1000ms
+.active
+	opacity: 1 !important
+
+
+.portfolio
+	opacity: 0
+	transform: translate(0px, 100px)
+	transition:all 500ms, transform 1000ms
+
+.active_portfolio
+	transform: translate(0px, 0px)
+	opacity: 1 !important	
+
+.form
+	opacity: 0
+	transform: translate(0px, 100px)
+	transition:all 500ms, transform 1000ms
+	//z-index -1
+.active_form
+	transform: translate(0px, 0px)
+	opacity: 1 !important	
+
+.footer
+	@extend .block
+	background url('../image/2fons.ru-28032_foot.jpg')
+	height 300px
+	
+.block_techno
+	@extend .block
+	height: inherit
+	text-align center
+	display: inline-table
+	.block_click
+		display: inline-block
+		width 100px;
+		height 100px
+		opacity: 0
+		cursor: pointer
+.block_techno_im1
+	background url('../image/background_09.jpg')
+	background-size 100%
+.block_techno_im2
+	background url('../image/background_08.jpg')
+	background-size 100%
+
+.block_techno_1
+	transition:all 500ms, transform 3000ms
+	opacity: 0
+	transform: translate(0px, 100px)
+.techno_activ
+	opacity: 1
+	transform: translate(0px, 0px)
+
+.im_techno1,.im_techno2,.im_techno3
+	background white
+	height 100px
+.w
+	color white
+	margin-top 20px
+.tit_techno
+	transition:all 500ms, transform 3000ms
+	color #2d2c2c
+	margin-top 20px
+.abs
+	height: 400px
+	position: absolute
+	//background: #23527c
+	text-align: center
+	transition:all 500ms, transform 3000ms
+	opacity: 0
+.abs_correct
+	padding-left: 50px
+@media (max-width:1200px){
+.abs_correct{
+	margin-top: 400px
+	}
+}
+.block_servise
+	margin-top 10px
+
+.abs_activ
+	opacity: 1
+.my-mark
+	text-align: left
+	margin-left: 25px
+	&>li
+		color white
+.my-mark1
+	text-align: left
+	//margin-left: 25px
+	&>li
+		color white
+.p10{padding: 10px;}
+
+.img_dev
+	width 100px
+	height 100px
+	display: inline-block
+	margin: 30px 10px 10px 10px
+.img_dev_web
+	background url('../image/servise/qualitygaranteed.png')
+	background-size 100%
+.img_dev_prog
+	background url('../image/servise/gov-4.png')
+	background-size 100%
+
+.block_portfolio
+	@extend .block
+	height: inherit
+.img_port	
+	width: 100%
+	height: 170px
+	display: inline-block	
+	border: 1px solid grey
+	
+.img_port1
+	background: url('../image/port/Image000.png')
+	background-size: 100%
+	background-repeat: no-repeat
+.img_port2
+	background: url('../image/port/Image001.png')
+	background-size: 100%
+	background-repeat: no-repeat
+.img_port3
+	background: url('../image/port/Image002.png')
+	background-size: 100%
+	background-repeat: no-repeat
+.img_port4
+	background: url('../image/port/Image003.png')
+	background-size: 100%
+	background-repeat: no-repeat
+	
+.col-xs-1>.thumbnail
+	background none
+	border: none
+
+.pr0
+	padding-right: 0px
+	
+span
+	&.glyphicon
+		&.glyphicon-earphone
+			padding: 10px 3px
+			font-size: 17px
+			font-weight: bolder
+
+.panel-body
+	background: black
+	border-radius: 8px
+

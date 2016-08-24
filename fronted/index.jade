@@ -1,0 +1,222 @@
+
+html
+	head
+		meta(charset="UTF-8")
+	
+	noscript
+		div
+			img(src="https://mc.yandex.ru/watch/39219305" style="position:absolute; left:-9999px;" alt="")
+
+	body(data-spy="scroll" data-target=".menu")
+		div.mouse1
+		section.block_video
+			//loop
+			//video(autoplay muted class="bgvideo" id="bgvideo") 
+				source(src="v/untitled.webm" type="video/mp4")
+			//.block_video__cover
+			.block_video__info
+				.logo						
+				h1 "Мы делаем Ваш бизнес лучше"
+				h2 Cоздание сайтов
+				h2 Разработка программ
+				a.arrow_down(href='#service')
+		//.menu.navbar.affix-top(data-spy="affix" data-offset-top="750")
+		.menu
+			.container-fluid
+				.row
+					.col-xs-offset-1.col-xs-1.logo_min
+					a.menu__item(href="#" ) Услуги
+					a.menu__item(href="#port" ) Портфолио
+		section.block4.container-fluid#service
+			.row(style="margin-right: 0px;")
+				h1 Услуги
+				-for (var i1 = 0; i1 < 2; i1++)
+					.block_servise.col-xs-offset-3.col-lg-offset-2.col-xs-6.col-lg-3
+						.col-xs-6.position.c
+							div.m.rot1(style="transform: rotateY(0deg);")
+								div.front
+								div.back
+						-for (var i = 2; i < 5; i++)
+							.col-xs-6.position.c
+								div.m(class = 'rot'+i style="transform: rotateY(0deg);")
+									div.col-xs-6
+									div.back
+							.col-xs-6.position.c
+								div.m(class = 'rot'+i style="transform: rotateY(0deg);")
+									div.col-xs-6
+									div.back
+						.col-xs-6.position.c
+							div.m.rot5(style="transform: rotateY(0deg);")
+								div.front
+								div.back
+				.col-xs-offset-3.col-lg-offset-2.col-xs-6.col-lg-3.abs
+					.img_dev.img_dev_web
+					h2.w Разработка сайтов
+					ul.my-mark
+						each val in ['Landin Page', 'Корпоративные сайты', 'CRM системы','Дизайнерские сайты']
+							li
+								i.glyphicon.glyphicon-ok.p10
+								|#{val}
+				.col-xs-offset-3.col-lg-offset-7.col-xs-6.col-lg-3.abs.abs_correct
+					.img_dev.img_dev_prog
+					h2.w Разработка программ
+					ul.my-mark1
+						each val in ['Корпоративные программы', 'Мобильные приложения', 'Разработка игр','Разработка скриптов']
+							li
+								i.glyphicon.glyphicon-ok.p10
+								|#{val}
+		hr
+		section.block_portfolio.text-center#port
+			h1 Портфолио
+			.row.portfolio
+				.col-sm-6.col-md-3
+					.thumbnail
+						.img_port.img_port1
+						.caption
+						h3 Торговля кондитерскими изделиями
+						p.p10
+							a.btn.btn-default(href="#" role="button") Перейти на сайт
+
+				.col-sm-6.col-md-3
+					.thumbnail
+						.img_port.img_port2
+						.caption
+						h3 Москитные сетки
+						p.p10
+							a.btn.btn-default(href="#" role="button") Перейти на сайт
+				.col-sm-6.col-md-3
+					.thumbnail
+						.img_port.img_port3
+						.caption
+						h3 Оптовая продуктовая компания
+						p.p10
+							a.btn.btn-default(href="#" role="button") Перейти на сайт
+				.col-sm-6.col-md-3
+					.thumbnail
+						.img_port.img_port4
+						.caption
+						h3 Шторы на окна
+						p.p10 
+							a.btn.btn-default(href="#" role="button") Перейти на сайт
+			hr
+			.row.portfolio
+				//p Больше работ можем отправить вам на почту
+				p Больше работ предоставляем по Вашему запросу
+			hr
+
+		section.block_techno.block_techno_im1
+			.block_click
+			h1.tit_techno.p10 Испльзуемые технология
+			.conteiner.block_techno_1
+				.row
+					.col-sm-offset-2.col-xs-1.pr0
+						.thumbnail
+							img(src=require('./image/techno/all/php.png'))
+
+					each val in ['android.svg.png', 'apache.png', 'bootstrap.png', 'cpp.png', 'csh.png', 'CSS.png', 'drupal.png']
+						.col-xs-1.pr0
+							.thumbnail
+								img(src=require('./image/techno/all/' + val))
+				.row
+					.col-sm-offset-2.col-xs-1.pr0
+						.thumbnail
+							img(src=require('./image/techno/all/HTML5.png'))
+
+					each val in ['jade-logo.png','java.png','joomla.png','jQurery.gif','js.png','Microsoft_SQL_Server.png','MODX.png']
+						.col-xs-1.pr0
+							.thumbnail
+								img(src=require('./image/techno/all/' + val))
+				.row
+					.col-sm-offset-2.col-xs-1.pr0
+						.thumbnail
+							img(src=require('./image/techno/all/MySQL.svg.png'))
+
+					each val in ['nodejs.png','Python.png','unity3d.png','WebGL.png','webpack.png','wordpress.png','ZendFramework.png']
+						.col-xs-1.pr0
+							.thumbnail
+								img(src=require('./image/techno/all/' + val))
+
+		hr
+		section.block_contact.text-center
+			h1.p10 Обратная связь
+			//.conteiner-fluid
+				.row
+					.col-xs-offset-1.col-xs-5
+						.row
+							.col-xs-12
+								input.form-control(type="text" placeholder=".col-xs-2")
+						.row
+							.col-xs-12
+								input.form-control(type="text")
+					.col-xs-5
+						.row
+							.col-xs-12
+								textarea.form-control(rows="5")
+						.row
+							.col-xs-1
+								input.btn(type="button" value = 'Отправить')
+			.container
+				.row
+					.col-sm-6.col-sm-offset-3.form
+						// Контейнер, содержащий форму обратной связи
+						.panel.panel-info.text-left
+							// Заголовок контейнера
+							//.panel-heading
+								h3.panel-title Форма обратной связи
+							// Содержимое контейнера
+							.panel-body
+								// Сообщение, отображаемое в случае успешной отправки данных
+								#successMessage.alert.alert-success.hidden(role='alert')
+									strong Спасибо!
+									|	Ваше сообщение успешно отправлено.
+								// Форма обратной связи
+								form#contactForm
+									.row
+										#error.col-sm-12(style='color: #ff0000; margin-top: 5px; margin-bottom: 5px;')
+										// Имя и email пользователя
+										.col-sm-6
+											// Имя пользователя
+											.form-group.has-feedback
+												label.control-label(for='name') Введите ваше имя:
+												input#name.form-control(type='text', name='name', required='required', value='', placeholder='Например, Иван Иванович', minlength='2', maxlength='30')
+												span.glyphicon.form-control-feedback
+										.col-sm-6
+											// Email пользователя
+											.form-group.has-feedback
+												label.control-label(for='email') Введите адрес email:
+												input#email.form-control(type='email', name='email', required='required', value='', placeholder='Например, ivan@mail.ru', maxlength='30')
+												span.glyphicon.form-control-feedback
+									// Сообщение пользователя
+									.form-group.has-feedback
+										label.control-label(for='message') Введите сообщение:
+										textarea#message.form-control(rows='3', placeholder='Введите сообщение от 20 до 500 символов', minlength='20', maxlength='500')
+									//hr
+									// Изображение, содержащее код капчи
+									//img#img-captcha(src='/feedback/captcha.php')
+									// Элемент, обновляющий код капчи
+									//#reload-captcha.btn.btn-default
+										i.glyphicon.glyphicon-refresh
+										|	Обновить
+									// Блок для ввода кода капчи
+									//.form-group.has-feedback
+										label#label-captcha.control-label(for='captcha') Пожалуйста, введите указанный на изображении код:
+										input#text-captcha.form-control(name='captcha', type='text', required='required', value='', autocomplete='off', minlength='6', maxlength='6')
+										span.glyphicon.form-control-feedback
+									// Кнопка, отправляющая форму
+									button.btn.btn-primary.pull-right(type='submit') Отправить сообщение
+								// Конец формы
+						// Конец контейнера
+
+
+
+		
+		//section.block3
+
+		section.footer
+			.conteiner
+				.row
+					.col-sm-offset-2.col-sm-3
+						p.w Контактный телефот 
+						a.tel(href='tel:+79772570798')
+							span.glyphicon.glyphicon-earphone
+							|+7(977) 257-07-98
