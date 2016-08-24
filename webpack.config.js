@@ -38,7 +38,7 @@ module.exports = {
 
         
        ,{test: /\.jade/, loader: 'jade?pretty'/*pass options to pug as a query ('pug-html-loader?pretty')*/}
-       ,{test: /\.(jpg|png|mp4|eot|svg|ttf|woff|woff2|gif)$/,loader: 'file?name=[path][name].[ext]'}
+       ,{test: /\.(jpg|png|mp4|eot|svg|ttf|woff|woff2|gif|php|ico)$/,loader: 'file?name=[path][name].[ext]'}
        // ,{
        //      //test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
        //      //test:'my.js',

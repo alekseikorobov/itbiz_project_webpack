@@ -49,11 +49,11 @@ label
 	// height 100px;
 	background url('../image/2fons.ru-28032_m.jpg');
 	background-size 100%
-	padding 10px
+	//padding 10px
 	//box-shadow0px 0px 10px;
 	//top: 0px
 	//z-index: 9999
-	width: 100%
+	//width: 100%
 	//top: 150px 
 	//position: fixed
 	z-index: 200 !important
@@ -66,14 +66,12 @@ label
 	margin: 0px 3px
 	text-decoration: blink
 	transition:all 700ms, transform 700ms
-	& a
-		te
 	&:hover
 		background-color white
 		text-decoration: blink
-.menu1
-	@extend .menu
-	width 200px
+//.menu1
+//	@extend .menu
+	//width 200px
 
 .pre_block
 	background-color black
@@ -85,9 +83,9 @@ label
 	padding 34px
 
 
-.block_setka
-	@extend .block
-	background url('../image/test_1.png')
+//.block_setka
+	//@extend .block
+	//background url('../image/test_1.png')
 	//box-shadow 0px 0px 100px #929292 inset
 
 .block_video
@@ -163,16 +161,6 @@ h2
 	//width: 1000px
 	//background url('../image/')
 
-.mouse1
-	width 200px
-	height 200px
-	background-color blue
-	border-radius 50%
-	//z-index 1
-	position absolute
-	top -500px
-	box-shadow 0px 0px 100px blue
-
 .blockForm
 	width 300px
 	height 400px
@@ -201,6 +189,18 @@ video
 	width: 70px
 	height: 70px
 
+.navbar-inverse .navbar-nav>li>a
+	padding: 25px
+	transition:all 700ms, transform 700ms
+	&:hover
+		background-color white
+		color black
+.navbar-inverse .navbar-nav>.active>a
+	background-color white
+	color black
+
+
+
 .logo__vis
 	transform: translate(0px, 0px) !important
 	opacity: 1 !important
@@ -215,6 +215,7 @@ video
 	transform: translate(0px, 100px)
 	&:hover
 		border-top-color: grey
+		transform: translate(0px, 10px) !important
 
 
 .bl
@@ -291,12 +292,15 @@ video
 	@extend .block
 	background url('../image/2fons.ru-28032_foot.jpg')
 	height 300px
-	
+
+.block_techno_pre
+	background #050505
 .block_techno
 	@extend .block
 	height: inherit
 	text-align center
 	display: inline-table
+	
 	.block_click
 		display: inline-block
 		width 100px;
@@ -306,9 +310,11 @@ video
 .block_techno_im1
 	background url('../image/background_09.jpg')
 	background-size 100%
+	background-repeat: no-repeat
 .block_techno_im2
 	background url('../image/background_08.jpg')
 	background-size 100%
+	background-repeat: no-repeat
 
 .block_techno_1
 	transition:all 500ms, transform 3000ms
@@ -339,7 +345,7 @@ video
 	padding-left: 50px
 @media (max-width:1200px){
 .abs_correct{
-	margin-top: 400px
+	margin-top: 420px
 	}
 }
 .block_servise
@@ -397,7 +403,7 @@ video
 	background-size: 100%
 	background-repeat: no-repeat
 	
-.col-xs-1>.thumbnail
+.pr0>.thumbnail
 	background none
 	border: none
 

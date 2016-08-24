@@ -2,6 +2,10 @@
 require('./../style/fonts.styl');
 require('./../style/style.styl');
 
+require('./../srv.php');
+
+
+
 // <!-- Yandex.Metrika counter -->
 // <script type="text/javascript">
     (function (d, w, c) {
@@ -41,18 +45,37 @@ var isportfolio = false;
 
 $(document).ready(function(){
 	
-	$(".menu").sticky({ topSpacing: 0 });
-
 	$("a").click(function () { 
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
 		$('html,body').animate( { scrollTop: (destination-90) }, 500 );
 		return false;
 	});
-
-	mousemove_block('.block_setka','.mouse1');
 	
 	$window = $(window);
+
+	issizemin = $window.width() < 768;
+
+	if(issizemin){
+		$(".menu").unstick();
+	}
+	else{
+		$(".menu").sticky({ topSpacing: 0 });
+	}
+	$window.resize(function() {
+		if($(window).width() < 768){
+			if(!issizemin){
+				$(".menu").unstick();
+				issizemin =true;
+			}
+		}
+		else{
+			if(issizemin){
+				$(".menu").sticky({ topSpacing: 0 });
+				issizemin = false;
+			}
+		}
+	});
 
 	//плавное появление
 	$('.logo').addClass('logo__vis');
@@ -84,7 +107,8 @@ $(document).ready(function(){
 	$(".block_techno_1").waypoint(function(direction) {
 		if (direction === "down") {
 			if(!isClu_glob){
-				onClickBar();
+				if(!isClu)
+					onClickBar();
 				isClu_glob = true;
 			}
 		};
@@ -98,7 +122,36 @@ $(document).ready(function(){
 				isblock_contact = true;
 			}
 		};
-	}, {offset: 300});
+	}, {offset: 700});
+
+	var name  = '',mail = '',message = '';
+	$('#contactForm').submit(function(){
+		
+		if(name !== $('#name').val()
+		   || mail !== $('#mail').val()
+		   || message !== $('#message').val()){
+
+			name = $('#name').val();
+			mail = $('#mail').val();
+			message = $('#message').val();
+
+			
+			$.ajax({
+				url: "srv.php",
+				type: 'POST',
+				data: "name="+name
+					  +"&mail="+mail
+					  +"&message="+message
+				,
+				success: function (data, textStatus, jqXHR) {
+					console.log(data); 
+					$('#successMessage').removeClass('hidden');
+				}
+			});
+		}
+		return false;
+    });
+
  });
 onClickBar = function(){
 	
