@@ -82,7 +82,18 @@ label
 	position relative
 	padding 34px
 
-
+.block_infoweb
+	@extend .block
+	background url('../image/topoboi.com_18403.jpg')
+	background-size 100%
+	background-position: 1px -236px
+	display: inline-table
+.block_infoprogramm
+	@extend .block
+	background url('../image/maxresdefault.jpg')
+	background-size 100%
+	background-position: 1px -236px
+	display: inline-table
 //.block_setka
 	//@extend .block
 	//background url('../image/test_1.png')
@@ -252,13 +263,20 @@ video
 	//background-color: #23527c//#000
 	background-color: #181b1f
 	//border: 1px solid #ddd
-	color: #777
 	//position: absolute
 	transform: rotateY(180deg)
 	backface-visibility: hidden
 	color: white
 	padding: 10px
 	font-size: 91px
+.bc_black
+	background-color: black
+.bc_white
+	background-color: white
+	//border-radius: 20px
+.bc_blue
+	background-color: #337ab7
+
 
 .block_inform
 	margin-top: 100px
@@ -341,6 +359,10 @@ video
 	text-align: center
 	transition:all 500ms, transform 3000ms
 	opacity: 0
+.abs1
+	@extend .abs
+.abs2
+	@extend .abs	
 .abs_correct
 	padding-left: 50px
 @media (max-width:1200px){
@@ -351,8 +373,11 @@ video
 .block_servise
 	margin-top 10px
 
-.abs_activ
+.abs_activ,.abs1_activ,.abs2_activ
 	opacity: 1
+
+.abs1_activ
+	padding: 25px
 .my-mark
 	text-align: left
 	margin-left: 25px
@@ -364,6 +389,25 @@ video
 	&>li
 		color white
 .p10{padding: 10px;}
+
+.tel1
+	color: white
+	padding: 17px
+	float: right
+
+
+
+@media (max-width:769px){
+	.p10{padding: 4px;}
+	h2 {margin: 10px 0 5px;}
+	.tel1{ padding: 7px;float: left;}
+}
+
+.my-mark2
+	text-align: left
+	//margin-left: 25px
+	&>li
+		color black
 
 .img_dev
 	width 100px
@@ -420,4 +464,30 @@ span
 .panel-body
 	background: black
 	border-radius: 8px
+
+
+
+.layer1
+	position absolute
+	background: url('../image/layer1.png')
+	width: 1207px
+	height: 523px
+	top: 0px
+	left: 0px
+
+.layer2
+	position absolute
+	background: url('../image/layer2.png')
+	width: 1347px
+	height: 542px
+	top: 0px
+	left: 0px
+
+.layer3
+	position absolute
+	background: url('../image/layer3.png')
+	width: 1266px
+	height: 503px
+	top: 0px
+	left: 0px
 

@@ -43,7 +43,7 @@ html(lang='ru')
 		section.block_video
 			.block_video__info
 				.logo						
-				h1 Cоздание сайтов
+				h1 Создание сайтов
 				h1 Разработка программ
 				h2 "Мы делаем Ваш бизнес лучше"
 				a.arrow_down(href='#service')
@@ -51,6 +51,9 @@ html(lang='ru')
 			.row
 				.navbar.navbar-inverse.menu
 					.container
+						a.tel1(href='tel:+79772570798')
+							span.glyphicon.glyphicon-earphone
+							|+7(977) 257-07-98
 						.navbar-header
 							button.navbar-toggle(type='button' data-toggle='collapse' data-target='#responsive-menu')
 								span.sr-only Открыть меню
@@ -67,6 +70,7 @@ html(lang='ru')
 									a(href="#techno") Технология
 								li
 									a(href="#conect") Связаться
+						
 
 
 
@@ -77,7 +81,7 @@ html(lang='ru')
 					.block_servise.col-sm-offset-3.col-lg-offset-2.col-xs-12.col-sm-6.col-lg-3
 						.col-xs-6.col-sm-6.position.c
 							div.m.rot1(style="transform: rotateY(0deg);")
-								div.front
+								div.col-xs-6
 								div.back
 						-for (var i = 2; i < 5; i++)
 							.col-xs-6.col-sm-6.position.c
@@ -90,7 +94,7 @@ html(lang='ru')
 									div.back
 						.col-xs-6.col-sm-6.position.c
 							div.m.rot5(style="transform: rotateY(0deg);")
-								div.front
+								div.col-xs-6
 								div.back
 				.col-sm-offset-3.col-lg-offset-2.col-sm-6.col-xs-12.col-lg-3.abs
 					.img_dev.img_dev_web
@@ -100,6 +104,7 @@ html(lang='ru')
 							li
 								i.glyphicon.glyphicon-ok.p10
 								|#{val}
+					a.btn.btn-default(href="#infoweb" role="button") Подробнее
 				.col-sm-offset-3.col-lg-offset-7.col-xs-12.col-sm-6.col-lg-3.abs.abs_correct
 					.img_dev.img_dev_prog
 					h2.w Разработка программ
@@ -108,6 +113,7 @@ html(lang='ru')
 							li
 								i.glyphicon.glyphicon-ok.p10
 								|#{val}
+					a.btn.btn-default(href="#infoprogramm" role="button") Подробнее
 		hr
 		section.block_portfolio.text-center#port
 			h1 Портфолио
@@ -118,7 +124,7 @@ html(lang='ru')
 						.caption
 						h3 Торговля кондитерскими изделиями
 						p.p10
-							a.btn.btn-default(href="http://sibtrayd.ru" role="button") Перейти на сайт
+							a.btn.btn-primary(href="http://sibtrayd.ru" role="button" target='_blanck') Перейти на сайт
 
 				.col-sm-6.col-md-3
 					.thumbnail
@@ -126,21 +132,21 @@ html(lang='ru')
 						.caption
 						h3 Москитные сетки
 						p.p10
-							a.btn.btn-default(href="http://setki5.ru" role="button") Перейти на сайт
+							a.btn.btn-primary(href="http://setki5.ru" role="button" target='_blanck') Перейти на сайт
 				.col-sm-6.col-md-3
 					.thumbnail
 						.img_port.img_port3
 						.caption
 						h3 Оптовая продуктовая компания
 						p.p10
-							a.btn.btn-default(href="http://fen-ix.ru" role="button") Перейти на сайт
+							a.btn.btn-primary(href="http://fen-ix.ru" role="button" target='_blanck') Перейти на сайт
 				.col-sm-6.col-md-3
 					.thumbnail
 						.img_port.img_port4
 						.caption
 						h3 Шторы на окна
 						p.p10 
-							a.btn.btn-default(href="http://shtori25.ru" role="button") Перейти на сайт
+							a.btn.btn-primary(href="http://shtori25.ru" role="button" target='_blanck') Перейти на сайт
 			hr
 			.row.portfolio
 				p Больше работ предоставляем по Вашему запросу
@@ -149,8 +155,8 @@ html(lang='ru')
 		section.block_techno_pre#techno
 			.block_techno.block_techno_im1
 				.block_click
-				h1.tit_techno.p10 Испльзуемые технология
-				.conteiner.block_techno_1
+				h1.tit_techno.p10 Используемые технология
+				.container.block_techno_1
 					.row
 						//.col-sm-offset-2.col-xs-1.pr0
 						.col-sm-offset-2.col-sm-1.col-xs-3.pr0
@@ -216,9 +222,170 @@ html(lang='ru')
 									button.btn.btn-primary.pull-right(type='submit') Отправить сообщение
 								// Конец формы
 						// Конец контейнера
+		
+		section.block_infoweb.container-fluid.text-center#infoweb
+			.row(style="margin-right: 0px;")
+				h1.w Разработка сайтов
+				.block_servise.col-sm-offset-2.col-lg-offset-2.col-xs-12.col-sm-8.col-lg-8
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb1(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb2(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb2(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb6(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb6(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_infoweb7(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_white
+
+				.col-sm-offset-2.col-lg-offset-2.col-sm-6.col-xs-11.col-lg-8.abs1
+					h2 Что мы предлагаем и почему Вам стоит нам доверять?
+					ul.my-mark2
+						each val in ['Слаженный коллектив и большой опыт по работе с клиентами.', 'Адекватные сроки выполнения - от 10 дней', 'Разумные цены','Мы гарантируем отзывчивый сайт и уникальный дизайн','Так же предоставляем бесплатный хостинг на 1 год','Держим клиентов в курсе на всех этапах работы', 'Увеличиваем конверсию на 30%']
+							li
+								i.glyphicon.glyphicon-ok.p10
+								|#{val}
+					a.btn.btn-primary(href="#conect" role="button") Заказать
+		section.block_infoprogramm.container-fluid.text-center#infoprogramm
+			.row(style="margin-right: 0px;")
+				h1.w Разработка программного обеспечения
+				.block_servise.col-sm-offset-2.col-lg-offset-2.col-xs-12.col-sm-8.col-lg-8
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm1(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm2(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm2(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm3(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm6(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm4(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm5(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm6(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+					.col-xs-3.col-sm-3.position.c
+						div.m.rot_inforogramm7(style="transform: rotateY(0deg);")
+							div.col-xs-3.bc_black
+							div.back.bc_blue
+
+				.col-sm-offset-2.col-lg-offset-2.col-sm-6.col-xs-11.col-lg-8.abs2
+					h2.w Какое программное обеспечение мы можем предложить для вас?
+					ul.my-mark1
+						each val in ['Различные CRM системы для Вашей организации.', 'Скриптовые приложения, которые увеличивают эффективность', 'Используем современные и стабильные средства разработки','Мобильные приложения, которые могут привлекать клиентов','Организуем обучение для Ваших сотрудников','Пишем корректную документацию', 'Обеспечиваем плотный контакт с нашим менеджером и регулярно поддерживаем проект']
+							li
+								i.glyphicon.glyphicon-ok.p10
+								|#{val}
+					a.btn.btn-default(href="#conect" role="button") Заказать
 
 		section.footer
-			.conteiner
+			.container
 				.row
 					.col-sm-offset-2.col-sm-3
 						p.w Контактный телефот 
